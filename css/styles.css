@@ -1,6 +1,6 @@
 .container
 {
-  width: 50%;
+  width: 55%;
   margin: auto;
   padding: 10px;
   margin-top: 10px;
@@ -11,21 +11,6 @@
 }
 
 .row {
-  margin: 10px;
+  margin: 20px;
 }
 
-.h1 {
-  margin: auto;
-}
-
-.p {
-  margin: auto;
-}
-
-.btn btn-dark {
-  margin: auto;
-}
-
-.body {
-  margin: auto; 
-}

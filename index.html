@@ -13,10 +13,10 @@
       <h1>Welcome to the Pizza Parlor</h1>
       <p>Select your size, toppings, and/or sides</p>
       <div class = "row">
-        <div class = "col-3">
-          Pizza Type
+        <div class = "col-4">
+          <p>Pizza Type <small>(Small: $10, Medium: $13, Large: $15)</small></p> 
         </div>
-        <div class = "col-9">
+        <div class = "col-8">
           <select class="form-control" id="pizza-size">
             <option value="1">None</option>
             <option value="2">Small</option>
@@ -26,10 +26,10 @@
         </div>
       </div>
       <div class = "row">
-        <div class = "col-3">
-          Toppings
+        <div class = "col-4">
+          <p>Toppings <small>($2)</small></p> 
         </div>
-        <div class = "col-9">
+        <div class = "col-8">
           <select class="form-control" id="topping">
             <option value="1">None</option>
             <option value="2">Pepperoni</option>
@@ -41,11 +41,11 @@
         </div>
       </div>
       <div class = "row">
-        <div class = "col-3">
-          Sides
+        <div class = "col-4">
+          <p>Sides <small>($5)</small></p>
         </div>
-        <div class = "col-9">
-          <select class="form-control" id="sides">
+        <div class = "col-8">
+          <select class="form-control" id="side">
             <option value="1">None</option>
             <option value="2">Wings</option>
             <option value="3">Bread Sticks</option>
@@ -53,7 +53,13 @@
           </select>
         </div>
       </div>
-      <button type="submit" class = "btn btn-dark">Submit</button>
+      <div class = "row">
+        <div class = "col-4">
+          <button type="submit" class = "btn btn-dark">Submit</button>
+        </div>
+        <div class = "col-8">
+          <p>Total Price: <span id = "price"></span></p>
+      
     </form>
   </div>
 
