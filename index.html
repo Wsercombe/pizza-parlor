@@ -9,50 +9,54 @@
 </head>
 <body>
   <div class = "container">
-    <h1>Welcome to the Pizza Parlor</h1>
-    <p>Select your size, toppings, and/or sides</p>
-    <div class = "row">
-      <div class = "col-3">
-        Pizza Type
+    <form id = "order">
+      <h1>Welcome to the Pizza Parlor</h1>
+      <p>Select your size, toppings, and/or sides</p>
+      <div class = "row">
+        <div class = "col-3">
+          Pizza Type
+        </div>
+        <div class = "col-9">
+          <select class="form-control" id="pizza-size">
+            <option value="1">None</option>
+            <option value="2">Small</option>
+            <option value="3">Medium</option>
+            <option value="4">Large</option>
+          </select>
+        </div>
       </div>
-      <div class = "col-9">
-        <select class="form-control" id="pizza-size">
-          <option value="1">None</option>
-          <option value="2">Small</option>
-          <option value="3">Medium</option>
-          <option value="4">Large</option>
-        </select>
+      <div class = "row">
+        <div class = "col-3">
+          Toppings
+        </div>
+        <div class = "col-9">
+          <select class="form-control" id="topping">
+            <option value="1">None</option>
+            <option value="2">Pepperoni</option>
+            <option value="3">Jalepeno</option>
+            <option value="4">Green Peppers</option>
+            <option value="5">Pineappple</option>
+            <option value="6">Sausage</option>
+          </select>
+        </div>
       </div>
-    </div>
-    <div class = "row">
-      <div class = "col-3">
-        Toppings
+      <div class = "row">
+        <div class = "col-3">
+          Sides
+        </div>
+        <div class = "col-9">
+          <select class="form-control" id="sides">
+            <option value="1">None</option>
+            <option value="2">Wings</option>
+            <option value="3">Bread Sticks</option>
+            <option value="4">Soda</option>
+          </select>
+        </div>
       </div>
-      <div class = "col-9">
-        <select class="form-control" id="topping">
-          <option value="1">None</option>
-          <option value="2">Pepperoni</option>
-          <option value="3">Jalepeno</option>
-          <option value="4">Green Peppers</option>
-          <option value="5">Pineappple</option>
-          <option value="6">Sausage</option>
-        </select>
-      </div>
-    </div>
-    <div class = "row">
-      <div class = "col-3">
-        Sides
-      </div>
-      <div class = "col-9">
-        <select class="form-control" id="sides">
-          <option value="1">None</option>
-          <option value="2">Wings</option>
-          <option value="3">Bread Sticks</option>
-          <option value="4">Soda</option>
-        </select>
-      </div>
+      <button type="submit" class = "btn btn-dark">Submit</button>
+    </form>
   </div>
 
-</div>
+
 </body>
 </html>
