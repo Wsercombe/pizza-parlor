@@ -13,24 +13,22 @@ function Order(){
 
 function orderParser (orderType, orderId)
 {
-  alert(orderType);
-  alert(orderId);
   let value = "none";
   if(orderType === "pizza")
   {
-    if(orderId === 1) {
+    if(orderId === 2) {
       value = "small";
-    } else if(orderId === 2) {
+    } else if(orderId === 3) {
       value = "medium";
-    } else if (orderId === 3) {
+    } else if (orderId === 4) {
       value = "large";
     }
   } else if(orderType === "side") {
-    if (orderId !== 0) {
+    if (orderId !== 1) {
       return "side";
     } 
   } else if (orderType === "topping"){
-    if (orderId !== 0) {
+    if (orderId !== 1) {
       return "topping";
     }
   }
@@ -41,10 +39,10 @@ function orderParser (orderType, orderId)
 let order = new Order;
 
 $(document).ready(function(event) {
-  $("#order").submit(function(event) {
-    let pizzaOrder = orderParser("pizza", parseInt($("pizza-size")));
-    let toppingOrder = orderParser("topping", parseInt($("topping")));
-    let sideOrder = orderParser("side", parseInt($("side")));
+  $("#order").submit(function(event) { 
+    let pizzaOrder = orderParser("pizza", parseInt($("#pizza-size").val()));
+    let toppingOrder = orderParser("topping", parseInt($("#topping").val()));
+    let sideOrder = orderParser("side", parseInt($("#side").val()));
     alert ("you ordered a " + pizzaOrder + " " + toppingOrder + " " + sideOrder);
 
   });
