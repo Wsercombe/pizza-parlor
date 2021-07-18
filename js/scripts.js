@@ -1,18 +1,20 @@
 function Order(){
   self.price = 0;
   self.priceDict = {
-    "small": 10;
-    "medium": 12;
-    "large": 15;
-    "topping": 2;
-    "side": 5;
-    "none": 0;
-    }
+    "small": 10,
+    "medium": 12,
+    "large": 15,
+    "topping": 2,
+    "side": 5,
+    "none": 0
+    };
 }
 
 
 function orderParser (orderType, orderId)
 {
+  alert(orderType);
+  alert(orderId);
   let value = "none";
   if(orderType === "pizza")
   {
@@ -32,6 +34,7 @@ function orderParser (orderType, orderId)
       return "topping";
     }
   }
+  return value;
 }
 
 
@@ -39,6 +42,10 @@ let order = new Order;
 
 $(document).ready(function(event) {
   $("#order").submit(function(event) {
+    let pizzaOrder = orderParser("pizza", parseInt($("pizza-size")));
+    let toppingOrder = orderParser("topping", parseInt($("topping")));
+    let sideOrder = orderParser("side", parseInt($("side")));
+    alert ("you ordered a " + pizzaOrder + " " + toppingOrder + " " + sideOrder);
 
   });
 });
