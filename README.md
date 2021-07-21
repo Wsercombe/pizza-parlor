@@ -1,3 +1,27 @@
+Describe: parseItem(orderType, 1)
+Test: "It should return a 0 with any orderType and the orderId is 1 "
+ExpectparseItem(orderType, 1);
+
+Describe: parseItem("Pizza", 2);
+Test: "It should return "small" if the orderType is pizza and the orderId is 2"
+Expect(processNumber("pizza", 2).toEqual("small");
+
+Describe: parseItem("pizza", 3);
+Test: "It should return "medium" if the orderType is "pizza" and the orderId is 3"
+Expect(processNumber("pizza", 3).toEqual("medium");
+
+Describe: parseItem("pizza", 4);
+Test: "It should return "large" if the orderType is "pizza" and the orderId is 3"
+Expect(processNumber("pizza", 3).toEqual("medium");
+
+Describe: parseItem("topping", 2);
+Test: "It should return "topping" if the orderType is "topping" and the orderId is not 1"
+Expect(processNumber("topping", 2).toEqual("topping");
+
+Describe: parseItem("side", 2);
+Test: "It should return "side" if the orderType is "side" and the orderId is not 1"
+Expect(processNumber("side", 2).toEqual("side");
+
 # _Pizza-Parlor_
 
 #### _This application takes a user's order and outputs the cost_
